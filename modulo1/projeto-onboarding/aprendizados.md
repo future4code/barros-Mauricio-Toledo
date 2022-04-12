@@ -1,0 +1,3 @@
+# Aprendizado da semana
+Primeira Semana sem contar o **onboarding** Muita informação nova, aprendemos o basico do **Terminal** e o **Gitbash** Alguns comandos importantes que iremos usar durante toda nossa jornada na **Labenu**, criamos um repositorio na plataforma **github** onde usaremos os **repositorios** para nossos projetos e tivemos dois exercicios com o intuito de treinar os comandos aprendidos nas aulas.
+Ps: Empolgado, com medo e ansioso...
