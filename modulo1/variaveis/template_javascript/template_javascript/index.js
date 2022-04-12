@@ -1,12 +1,16 @@
+let primero
+let number
+console.log( typeof primeiro , number)
+
 const nome = "Mauricio"
 let idade = 31
 console.log(typeof nome , typeof idade)
 /* Acima aprensenta a ausencia de valores nas variaveis por isso o erro */
 console.log("Ola meu nome é" , nome , "tenho" , idade , "anos")
 
-let a = console.log("você é fã da marvel ?" , "Sim")
-let b = console.log("Você gosta de anime ?" , "Sim")
-let c = console.log("Voce gosta de rock ?" , "Sim")
+let a = "Voce é fa da marvel ? Sim"
+let b = "Você gosta de anime ? Sim"
+let c = "Voce gosta de rock ? Sim"
 // Exercicios/
 
 let x = 40
