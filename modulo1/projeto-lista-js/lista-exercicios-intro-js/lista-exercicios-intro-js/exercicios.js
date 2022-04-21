@@ -142,6 +142,12 @@ function checaRenovacaoRG() {
 let idade = AnoAtualdeAgora - DigiteoAno
 let prescisaRenovar = anoAtualdeAgora - aigiteaEmissão
 
+    
+  
+  
+
+
+
   
 
   
