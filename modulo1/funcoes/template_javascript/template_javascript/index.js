@@ -107,3 +107,20 @@ console.log(diferenca(Number(prompt("DIgite um numero")),Number(prompt("Digite m
 console.log(multiplica(Number(prompt("DIgite um numero")),Number(prompt("Digite mais um"))))
 console.log(divide(Number(prompt("DIgite um numero")),Number(prompt("Digite mais um"))))
 
+// Desafios //
+//A//
+let desafio = (novoParametro) => {
+
+}
+console.log(desafio())
+//B//
+let desafiob = (parametro1,parametro2) => {
+     somadosparam = parametro1 + parametro2
+}
+console.log(desafiob(35,34))
+//2//
+let quadradocateto = (cateto1,cateto2) => {
+     hipotenusa = (cateto1 * cateto1) + (cateto2 * cateto2)
+     return hipotenusa
+}
+console.log(quadradocateto(35,35))
