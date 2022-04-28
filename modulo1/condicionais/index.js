@@ -111,7 +111,7 @@ if (amigoFrescoPraFilme == "Fantasia" && amigoQuetaSemDinhero <= 15) { console.l
 let nomeDoComprador = prompt("Por favor insira seu nome completo")
 let tipoDoJogo = prompt("Se o jogo for internacional digite IN, e se for nacional/domestico digite DO")
 let etapaDoJogo = prompt("Digite a Etapa do jogo: DT se for disputa para 3o lugar, SF para semi-final e FI para final")
-let categoria = prompt("Digite a categoria 1,2,3 ou 4")
+let categoria = Number(prompt("Digite a categoria 1,2,3 ou 4"))
 let quantidadeDeIngressos = Number(prompt("Qual a quantidade de ingressos ?"))
 
 let valoresDoDomestico = function cauculoDodomestico() {
@@ -129,6 +129,41 @@ if (tipoDoJogo == "DO" && etapaDoJogo == "FI" && categoria == 1) { 1980*quantida
 if (tipoDoJogo == "DO" && etapaDoJogo == "FI" && categoria == 2) { 1320*quantidadeDeIngressos}
 if (tipoDoJogo == "DO" && etapaDoJogo == "FI" && categoria == 3) { 820*quantidadeDeIngressos}
 if (tipoDoJogo == "DO" && etapaDoJogo == "FI" && categoria == 4) { 330*quantidadeDeIngressos}}
+
+let valoresDoInternacional = function cauculoDoInternacional() {
+    if (tipoDoJogo == "IN" && etapaDoJogo == "DT" && categoria == 1) {(4.10*660)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "DT" && categoria == 2) {(4.10*440)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "DT" && categoria == 3) { (4.10*330)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "DT" && categoria == 4) { (4.10*170)*quantidadeDeIngressos}
+    
+    if (tipoDoJogo == "IN" && etapaDoJogo == "SF" && categoria == 1) { (4.10*1320)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "SF" && categoria == 2) { (4.10*880)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "SF" && categoria == 3) { (4.10*550)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "SF" && categoria == 4) { (4.10*220)*quantidadeDeIngressos}
+    
+    if (tipoDoJogo == "IN" && etapaDoJogo == "FI" && categoria == 1) { (4.10*1980)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "FI" && categoria == 2) { (4.10*1320)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "FI" && categoria == 3) { (4.10*820)*quantidadeDeIngressos}
+    if (tipoDoJogo == "IN" && etapaDoJogo == "FI" && categoria == 4) { (4.10*330)*quantidadeDeIngressos}}
+
+   /* ---Dados da compra--- 
+Nome do cliente:  Soter Padua 
+Tipo do jogo:  Nacional 
+Etapa do jogo:  Final 
+Categoria:  1 
+Quantidade de Ingressos:  10 ingressos 
+---Valores--- 
+Valor do ingresso:  R$ 1980
+Valor total:  R$ 19800*/
+if (tipoDoJogo == "DO" && etapaDoJogo == "DT") {console.log(`---Dados da compra--
+Nome do cliente ${nomeDoComprador}
+Etapa do jogo: Disputa do terceiro lugar
+Categoria: ${categoria}
+Quantidade de ingressos: ${quantidadeDeIngressos} ingressos
+Valor do Ingresso: ${cauculoDodomestico()}
+Valor total: ${cauculoDodomestico()}`);
+    
+}
 
     
 
