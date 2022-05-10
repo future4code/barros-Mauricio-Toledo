@@ -46,7 +46,9 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) { 
-   
+  const somentePares = array.filter(numeroPar => numeroPar % 2 === 0)
+  const elevadoAdois = somentePares.map(numeroPar => numeroPar * numeroPar)
+  return elevadoAdois
         
     
  
@@ -54,7 +56,12 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+  let maiorNumero = array[0]
+  for (let index = 1; index < array.length; index++) {
+    if (array[index] > maiorNumero) { maiorNumero = array[index]
+      
+    } }
+    return maiorNumero
 }
 
 // EXERCÍCIO 07
