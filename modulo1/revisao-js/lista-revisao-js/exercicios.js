@@ -32,11 +32,23 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
+  const somentePares = array.filter(numeroPar => numeroPar % 2 === 0)
+  return somentePares
   
-}
+    
+  
+  
+
+  
+   
+ 
+} 
 
 // EXERCÍCIO 05
-function retornaNumerosParesElevadosADois(array) {
+function retornaNumerosParesElevadosADois(array) { 
+   
+        
+    
  
 }
 
