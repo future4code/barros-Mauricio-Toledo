@@ -132,6 +132,11 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
+  let maiorNumero = array[0]
+  for (let index = 1; index < array.length; index++) {
+    if (array[index] > maiorNumero) { maiorNumero = array[index]
+      
+    } }
   
 }
 
