@@ -99,11 +99,17 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-  
-  
-  
-   
+  let numberPares = [];
+    for (let i = 0; numberPares.length < n; i++) 
+    {
+        if (i % 2 == 0) {
+            numberPares.push(i);
+        }
+    }
+    return numberPares;
 }
+   
+
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) { 
