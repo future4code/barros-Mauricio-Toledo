@@ -151,6 +151,10 @@ return frase
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
+ const anonimoNome = {nome:"ANÔNIMO"}
+ const srAnonimo = {...pessoa,...anonimoNome}
+ return srAnonimo
+
    
 }
 
