@@ -159,14 +159,32 @@ function retornaPessoaAnonimizada(pessoa) {
 }
 
 // EXERCÍCIO 13A
-function retornaPessoasAutorizadas(pessoas) {
+function retornaPessoasAutorizadas(pessoas) { 
+const autorizadaAusar = []
+for (let pessoa of pessoas) 
+{ if ((pessoa.idade > 14 && pessoa.idade < 60) 
+  && pessoa.altura >= 1.5) 
+  { autorizadaAusar.push(pessoa)
+  
+}
+  
+}
+return autorizadaAusar
+  
    
 }
 
 // EXERCÍCIO 13B
-function retornaPessoasNaoAutorizadas(pessoas) {
+function retornaPessoasNaoAutorizadas(pessoas) { 
+  const naoAutorizada = []
+  for (let pessoa of pessoas) {
+    if ((pessoa.idade <= 14 || pessoa.idade >= 60) || pessoa.altura < 1.5) { naoAutorizada.push(pessoa)
+      
+    }
+    
+  } return naoAutorizada }
   
-}
+
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
