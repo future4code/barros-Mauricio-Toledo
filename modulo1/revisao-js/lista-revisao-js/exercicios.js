@@ -102,7 +102,8 @@ function retornaNPrimeirosPares(n) {
   let numberPares = [];
     for (let i = 0; numberPares.length < n; i++) 
     {
-        if (i % 2 == 0) {
+        if (i % 2 == 0) 
+        {
             numberPares.push(i);
         }
     }
@@ -138,17 +139,14 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  let maiorNumero = array[0]
-  for (let index = 1; index < array.length; index++) {
-    if (array[index] > maiorNumero) { maiorNumero = array[index]
-      
-    } }
+ 
   
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
+  const frase = (`Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}.`)
+return frase
 }
 
 // EXERCÍCIO 12
