@@ -139,9 +139,23 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
- 
+  let maiorNumero = Math.max.apply(Math,array)
+  let segundoMaior 
+  let menorNumero = Math.min.apply(Math,array)
+  let segundoMenor 
+  for (let index = 0; index < array.length; index++) {
+  if (array[index] > segundoMaior && array[index] < maiorNumero) {
+  segundoMaior = array[index] }
+ else if (array[index] < segundoMenor && array[index] > menorNumero) {
+    segundoMenor = array[index]
+        
+      }
+    
+    
+  }
   
-}
+  
+     }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
@@ -178,25 +192,62 @@ return autorizadaAusar
 function retornaPessoasNaoAutorizadas(pessoas) { 
   const naoAutorizada = []
   for (let pessoa of pessoas) {
-    if ((pessoa.idade <= 14 || pessoa.idade >= 60) || pessoa.altura < 1.5) { naoAutorizada.push(pessoa)
+    if ((pessoa.idade <= 14 || pessoa.idade >= 60) 
+    || pessoa.altura < 1.5) 
+    { naoAutorizada.push(pessoa)
       
     }
     
-  } return naoAutorizada }
+  } 
+  return naoAutorizada 
+}
   
 
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+ for (let index = 0; index < contas.length; index++) {
+   let guardar = []
+   function cauculaSaldo(ultilizador) { 
+     ultilizador[index].compras.forEach(nr => guardar.push(nr * -1))}
+  function somaDaDivida(numeros) {
+    return numeros.reduce((sum , nr)=>  sum + nr )
+    
+  }
+   contas[index].compras =[]
+   contas[index].saldoTotal += somaDaDivida(guardar)
+ }
+return contas
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
+ let ordemAlfabetica = 
+ 
+ consultas.sort(function(a,b)
+ 
+ { if (a.nome < b.nome) 
+ 
+  { return -1
+  
+}else {return true}
+}
+)
+return ordemAlfabetica
   
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
+  let ordemDaconsulta = 
+  consultas.sort(function(a,b)
+  
+  { if (a.dataDaConsulta.split('/') < b.n) 
+  
+   { return -1
    
+ }else {return true} 
+ } )
+
+  
 }
