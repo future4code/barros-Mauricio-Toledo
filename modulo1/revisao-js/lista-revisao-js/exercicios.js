@@ -119,11 +119,9 @@ function retornaSegundoMaiorESegundoMenor(array) {
     }
     return 0;
   });
-  let maiorNumero = array.pop();
-  let segundoMenor = array[1];
-  let segundoMaior = Math.max.apply(Math, array);
-  let a2me2mai = [segundoMaior, segundoMenor];
-  return a2me2mai;
+  let segunMenor = array[1];
+  let segundoMaior = array[array.length - 2];
+  return [segundoMaior, segunMenor];
 }
 
 // EXERCÍCIO 11
@@ -162,7 +160,19 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 }
 
 // EXERCÍCIO 14
-function retornaContasComSaldoAtualizado(contas) {}
+function retornaContasComSaldoAtualizado(contas) {
+  let saldoDaConta = contas.map((item) => {
+    return item.compras.reduce((v1, v2) => {
+      return v1 + v2;
+    }, 0);
+  });
+
+  for (let i = 0; i < contas.length; i++) {
+    contas[i].saldoTotal -= saldoDaConta[i];
+    contas[i].compras = [];
+  }
+  return contas;
+}
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
@@ -177,4 +187,24 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 }
 
 // EXERCÍCIO 15B
-function retornaArrayOrdenadoPorData(consultas) {}
+function retornaArrayOrdenadoPorData(consultas) {
+  let datasDasConsultas = consultas.map((item) => {
+    return { nome: item.nome, dataDaConsulta: item.dataDaConsulta.split("/") };
+  });
+
+  for (let i = 0; i < datasDasConsultas.length; i++) {
+    datasDasConsultas.sort((a, b) => {
+      if (a.dataDaConsulta[i] > b.dataDaConsulta[i]) {
+        return 1;
+      } else if (a.dataDaConsulta[i] < b.dataDaConsulta[i]) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  let consultasPorData = datasDasConsultas.map((item) => {
+    return { nome: item.nome, dataDaConsulta: item.dataDaConsulta.join("/") };
+  });
+  return consultasPorData;
+}
