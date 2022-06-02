@@ -1,0 +1,117 @@
+body
+{
+    background-image: url(img/phoenix.webp);
+}
+header
+{
+    text-align: center;
+}
+.intro
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    color: black;
+}
+.introP
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    color: red;
+}
+nav
+{
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+	padding: 0px 5%;
+    font-weight: bold;
+	color: #2d2a2a
+}
+main
+{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+footer
+{ 
+    text-align: center;
+
+}
+h2
+{ 
+    text-align: center;
+    border: 20px;
+    color: red;
+
+}
+.nome
+{
+    
+    color: blue;
+    font-size: x-large;
+}
+.cargo
+{
+    color: red;
+    font-size: x-large;
+}
+.CEO
+{
+    color: blue;
+
+}
+.dir
+{
+    color: yellow;
+}
+.mg
+{
+    color: blueviolet;
+}
+.nurse
+{
+    color: palevioletred;
+}
+.en
+{
+    color: green;
+}
+.cb
+{
+    font-size: large;
+    border-width: 200px;
+    
+}
+.item-nome
+{
+    font-size: large;
+    color: red;
+    
+}
+.item-preço
+{
+    font-size: medium;
+    color: blue;
+}
+.item-qt
+{
+    font-size: medium;
+    color: blue;
+}
+form
+{
+    text-align: center;
+    border: #2d2a2a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+  font-weight: bold;
+  
+   
+}
+.btn1{
+    border: 2px solid #373636;
+	color: #373636;
+}
