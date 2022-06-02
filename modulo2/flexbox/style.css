@@ -1,0 +1,96 @@
+:root{
+    --rosa-escuro: mediumvioletred;
+    --rosa-claro: #f2d0e0;
+    --sombra: darkgray;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#logo > img, .navegacao > img, .logo-nav > img {
+    width: 25px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: var(--rosa-escuro);
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+}
+
+#logo > h1{
+    margin-left: 10px;
+}
+
+header > button{
+    padding: 2px 7px;
+    margin: 0%;
+}
+
+main{
+    display: flex;
+
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #f2d0e0;
+    width: 150px;
+    height: 100vh;
+    text-transform: uppercase;
+}
+
+.navegacao{
+    display: flex;
+    margin: 25px 15px;
+    justify-content: space-between;
+}
+
+.logo-nav{
+    display: flex;
+}
+
+.logo-nav > p {
+    margin-left: 8px;
+}
+
+#grade-bolos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.boloCa > img{
+    width: 220px;
+}
+
+.boloCa {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 8px ;  
+}
+
+.boloCa > h3{
+    padding-bottom: 6px;
+    font-weight: bolder;
+}
+
+footer{
+    display: flex;
+    background-color: mediumvioletred;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+} 
+
