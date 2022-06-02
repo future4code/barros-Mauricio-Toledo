@@ -1,0 +1,20 @@
+header{
+    display: grid;
+    grid-template-rows: 55% 10%;
+    grid-template-columns: 80% 10%;
+    align-items: center;
+    background-color: orangered;
+}
+
+footer{
+    
+   
+    background-color: gray;
+}
+.principal-img{
+    display: grid;
+    align-items: center;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-color: green;
+}
