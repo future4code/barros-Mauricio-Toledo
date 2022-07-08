@@ -1,2 +1,2 @@
 # link do surge
-steadfast-use.surge.sh
+http://comfortable-belief.surge.sh/
