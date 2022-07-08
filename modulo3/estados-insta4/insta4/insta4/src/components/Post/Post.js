@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import "./style.css";
+
+import "./style.js";
+import { PostContainer, PostHeader, PostFooter, UserPhoto, PostPhoto } from "./style.js";
 
 import { IconeComContador } from "../IconeComContador/IconeComContador";
-import iconeCoracaoBranco from "../../img/favorite-white.svg";
-import iconeCoracaoPreto from "../../img/favorite.svg";
-import iconeComentario from "../../img/comment_icon.svg";
+import iconeCoracaoBranco from "../img/favorite-white.svg";
+import iconeCoracaoPreto from "../img/favorite.svg";
+import iconeComentario from "../img/comment_icon.svg";
 import { SecaoComentario } from "../SecaoComentario/SecaoComentario";
-import iconeMarcar from "../../img/bookmark.svg";
-import iconeMarcado from "../../img/bookmark-black.svg";
-import iconeCompartilhar from "../../img/send.svg"
+import iconeMarcar from "../img/bookmark.svg";
+import iconeMarcado from "../img/bookmark-black.svg";
+import iconeCompartilhar from "../img/send.svg"
 import { SecaoCompartilhar } from "../SecaoCompartilhar/SecaoCompartilhar";
-
-
-
 function Post(props) {
   const [numeroCurtidas, setnumeroCurtidas] = useState(0);
   const [curtido, setCurtido] = useState(false);
@@ -21,23 +20,18 @@ function Post(props) {
   const [comentario, setValorInput] = useState('');
   const [marcado, setMarcado] = useState(false);
   const [compartilhar, setCompartilhar] = useState(false)
-
   let iconeMarcacao;
-
   if (marcado) {
     iconeMarcacao = iconeMarcado;
   } else {
     iconeMarcacao = iconeMarcar;
   }
-
   const onClickMarcado = () => {
     setMarcado(!marcado);
   };
-
   const handleComentario = (e) => {
     setValorInput(e.target.value);
   };
-
   const onClickCurtida = () => {
     setCurtido(!curtido);
     if (!curtido) {
@@ -46,7 +40,6 @@ function Post(props) {
       setnumeroCurtidas(numeroCurtidas - 1);
     }
   };
-
   const onClickComentario = () => {
     setComentando(!comentando);
     if (comentando) {
@@ -55,7 +48,6 @@ function Post(props) {
     setValorInput('')
     console.log(comentando);
   };
-
   const aoEnviarComentario = () => {
     setComentando(false);
     if (comentario !== ''){
@@ -63,8 +55,6 @@ function Post(props) {
     }
     console.log(comentario)
   };
-
-
   let componenteCompartilhar;
   if (compartilhar){
     componenteCompartilhar = <SecaoCompartilhar/>
@@ -73,62 +63,59 @@ function Post(props) {
   const onClickCompartilhar = () => {
     setCompartilhar(!compartilhar)
   }
-
-
   let iconeCurtida;
-
   if (curtido) {
     iconeCurtida = iconeCoracaoPreto;
   } else {
     iconeCurtida = iconeCoracaoBranco;
   }
-
   let componenteComentario;
-
   if (comentando) {
     componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} onChangeComentario={handleComentario} />;
   }
 
   return (
-    <div className="PostContainer">
-      <div className="PostHeader">
-        <img
-          className="UserPhoto"
+    
+    <PostContainer>
+      <PostHeader>
+        <UserPhoto
           src={props.fotoUsuario}
           alt={"Imagem do usuario"}
         />
         <p>{props.nomeUsuario}</p>
-      </div>
+      
+      </PostHeader>
 
-      <img className="PostPhoto" src={props.fotoPost} alt={"Imagem do post"} />
+      
+      <PostPhoto src={props.fotoPost} alt={"Imagem do post"} />
 
-      <div className="PostFooter">
+      
+      <PostFooter>
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
           valorContador={numeroCurtidas}
         />
-
         <IconeComContador
           icone={iconeComentario}
           onClickIcone={onClickComentario}
           valorContador={numeroComentarios}
         />
-
         <IconeComContador 
         icone={iconeMarcacao}
         onClickIcone={onClickMarcado}
         />
-
         <IconeComContador 
         icone={iconeCompartilhar}
         onClickIcone={onClickCompartilhar}
         />   
-        
-      </div>
+
+      
+      </PostFooter>
       {componenteComentario}
       {componenteCompartilhar}
-    </div>
+    
+    </PostContainer>
   );
 }
 
