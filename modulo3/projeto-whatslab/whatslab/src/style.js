@@ -56,6 +56,8 @@ span{
     border:2px solid black;
     display:flex;
     justify-content:space-between;
+    flex-direction:column;
+    
 
     
 };
@@ -66,7 +68,12 @@ p:nth-child(1){
             color: orange;
             align-items:center;
             border-radius:3px;
-            font-family: sans-serif
+            font-family: sans-serif;
+            max-width:fit-content;
+        };
+        p:nth-child(2){
+            max-width:fit-content;
         }
+        
 
 `
