@@ -1,4 +1,5 @@
 //teste
+
 /*import React from "react"
 import axios from "axios"
 export function App() {
@@ -21,11 +22,12 @@ export function App() {
 }
 export default App;*/
 
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+
 const App = () => {
+ 
   const [listaUsuario, setListaUsuario] = useState([]);
   const [meuInput, setMeuInput] = useState("");
 
@@ -36,10 +38,12 @@ const App = () => {
   const atualizaEmail = (event) => {
     setMeuInput(event.target.value);
   };
-
+  useEffect(() => {
+    getUsuario();
+  }, []);
   
 
-  //---------- Axios -----------
+  //  ------ Axios ------
   const url =
     "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
   const myHeaders = {
