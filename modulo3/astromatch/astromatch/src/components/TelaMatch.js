@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { TelaDeMatches, Warning } from "../Style";
+import { MyButton, TelaDeMatches, Warning } from "../Style";
 
 function TelaMatch({ setPage }) {
   const [matchList, setMatchList] = useState([]);
@@ -45,14 +45,14 @@ useEffect(()=>{
       .catch(() => {
         alert("Deu ruim não deu bom");
       });
-  }
+  };
 
   return (
     <TelaDeMatches>
       <h1>Seus Matches </h1>
       <div>
-        <button onClick={()=>setPage(0)}>Voltar...</button>
-        <button onClick={apagarMatches}>Zerar Matches</button>
+        <MyButton onClick={()=>setPage(0)}>Voltar...</MyButton>
+        <MyButton onClick={apagarMatches}>Zerar Matches</MyButton>
       </div>
       {meusMatches.length > 0 && meusMatches}
       {meusMatches.length === 0 && (

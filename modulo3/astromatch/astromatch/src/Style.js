@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 export const NavBar = styled.nav `
 display: flex;
@@ -112,7 +113,8 @@ export const TelaDeMatches = styled.div`
     min-height: 550px;
     border: 1px solid black;
     align-items: center;
-    background-color: white;
+    background-color: purple;
+    margin-left: 450px;
     div {
         display: flex;
         justify-content: space-around;
@@ -144,3 +146,19 @@ export const Warning = styled.p`
         text-align: center;
         padding: 90px 28px;
 ` 
+export const MyButton = styled.button`
+    background: indigo;
+    border: 0;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    button:hover{
+        background: black;
+    cursor: pointer;
+        
+    }
+    `
+
+    
+  
