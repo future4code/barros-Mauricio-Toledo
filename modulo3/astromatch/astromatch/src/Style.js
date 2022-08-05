@@ -29,8 +29,8 @@ display:flex;
 flex-direction: column;
 align-items:center;
 img{
-    width: 98vw;
-    height: 85vh;
+    width: 700px;
+    height: 500px;
     border-radius: 10px;
     display:flex;
     align-items:flex-end;
@@ -99,4 +99,48 @@ box-shadow:0,2px,6px,0 rgba(112,125,135,.15);
 
 
 `
+export const Botão = styled.button`
+width:150px;
+    height:150px;
 
+`
+export const TelaDeMatches = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 70vh;
+    min-height: 550px;
+    border: 1px solid black;
+    align-items: center;
+    background-color: white;
+    div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    ul{
+        width: 50%;
+        
+        li {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+        
+    img{
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+    }
+`
+
+export const Warning = styled.p`
+            font-size: 25px;
+        text-align: center;
+        padding: 90px 28px;
+` 
