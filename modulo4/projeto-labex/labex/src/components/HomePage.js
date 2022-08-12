@@ -5,7 +5,7 @@ function HomePage() {
    
     const navigate = useNavigate();
   
-    // PASSO 6: CRIAR A AÇÃO DOS BOTÕES
+  
     const goToTravels = () => {
       navigate("viagens")
     }

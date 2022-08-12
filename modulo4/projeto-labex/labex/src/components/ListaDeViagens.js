@@ -8,10 +8,10 @@ function ListaDeViagem() {
   
   
     const goToHome = () => {
-      navigate("")
+      navigate("/")
     };
     const goToForm = () =>{
-      navigate("formulario")
+      navigate("/viagens/formulario")
     }
   
    

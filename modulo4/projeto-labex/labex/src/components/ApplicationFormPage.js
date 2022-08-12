@@ -33,7 +33,7 @@ function FormularioDeViagem() {
   const planetList = travel.map((planets) => {
     return (
       <>
-        {planets.planet}
+        {planets.planet }
       </>
     );
   });
@@ -60,6 +60,7 @@ function FormularioDeViagem() {
          
          
      </label>
+     <button type="subimmit">Enviar</button>
      <button onClick={goToHome} >voltar</button>
     </form>
     

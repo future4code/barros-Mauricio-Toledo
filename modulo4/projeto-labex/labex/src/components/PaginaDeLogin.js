@@ -1,6 +1,18 @@
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 function PaginaDeLogin() {
+    const navigate = useNavigate();
+  
+  
+    const goToTravels = () => {
+      navigate("viagens")
+    }
+  
+    const goToLogin = () => {
+      navigate("login")
+    };
+  
     const [login,setLogin] = useState("")
     const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/login"
     const aluno = "Mauricio-Toledo-barros"
