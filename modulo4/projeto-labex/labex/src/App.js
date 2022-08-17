@@ -1,11 +1,12 @@
-import Rotas from "./components/Router";
+import HomePage from "./components/HomePage";
+import React from "react";
 
 
 
 function App() {
   return (
-    <Rotas/>
 
+<HomePage/>
     
   );
 }

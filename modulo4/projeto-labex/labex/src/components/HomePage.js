@@ -1,25 +1,17 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom'
+import {PaginaHome} from "./Styled"
 function HomePage() {
   
    
-    const navigate = useNavigate();
-  
-  
-    const goToTravels = () => {
-      navigate("viagens")
-    }
-  
-    const goToLogin = () => {
-      navigate("login")
-    };
-  
+    
     return ( 
-        <div>
+        <PaginaHome>
         <h1>Labex</h1>
-      <button onClick={goToTravels}>Ir para viagens</button>
-      <button onClick={goToLogin}>Login</button>
-      </div>
+        <h2>Seja bem vindo/a a nossa agência de viagens!</h2>
+      <button onClick={""}>Ir para viagens</button>
+      <button onClick={""}>Login</button>
+      </PaginaHome>
     )
 };
 export default HomePage;
