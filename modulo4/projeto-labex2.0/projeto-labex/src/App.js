@@ -1,8 +1,5 @@
 
-import { Router } from 'react-router-dom';
 
-import HomePage from './components/HomePage';
-import Login from './components/Login';
 
 import Rotas from './components/Router';
 
@@ -10,7 +7,7 @@ import Rotas from './components/Router';
 function App() {
   return (
     <div>
-   <Login/>
+   <Rotas/>
     </div>
   );
 }
