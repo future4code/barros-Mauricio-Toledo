@@ -1,9 +1,7 @@
-import * as express from 'express'
-import * as  cors from 'cors'
+import express from 'express'
+import cors from 'cors'
 import {Response, Request} from 'express'
 import { postData, userData } from './data'
-
-
 
 const app = express()
 app.use(express.json())
@@ -29,10 +27,10 @@ app.get('/posts', (req:Request, res: Response)=>{
         res.status(200).send(postsData)
     }
     catch(err){
-        res.status(400).end("Algo errado não esta certo")
+        res.status(400).end("No good!")
     }
 })
 
 app.listen(3003,() => {
-    console.log("Tudo Fine!")
+    console.log("Tudo fine!")
 })
