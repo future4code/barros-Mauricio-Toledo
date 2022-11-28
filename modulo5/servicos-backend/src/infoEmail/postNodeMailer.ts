@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 
 async function postNodemailer () {
     const mailSend = await transporter.sendMail({
-        from: "Mauricio-Toledo <mauricioluiz3800@gmail.com>",
+        from: "Mauricio-Toledo <aileen.schinner9@ethereal.email>",
         to: ["projetos_jbl-aaaaiax6fosqmlb2s7ipkez3d4@labenualunos.slack.com"],
         subject: "[BARROS - Mauricio Toledo]",
         text: "Exercicio enviado com atraso /email"
