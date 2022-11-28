@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import postNodemailer from "../info/postNodeMailer";
+import postNodemailer from "../infoEmail/postNodeMailer";
 
 async function postEmail (req: Request, res: Response) {
     try{

@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import getAdressInfo from "../info/getAdressInfo";
+import getAdressInfo from "../infoEmail/getAdressInfo";
 import {connection} from "../data/connection";
 
 async function getAdress (req: Request, res: Response) {
