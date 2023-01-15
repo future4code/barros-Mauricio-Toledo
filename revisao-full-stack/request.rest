@@ -1,2 +1,18 @@
 ### Test
 GET http://localhost:3003/ping
+###
+
+POST http://localhost:3003/client
+Content-Type: application/json
+
+{
+    "nome": "Mauricio Toledo"
+}
+### Retorna todos clients
+GET http://localhost:3003/clients
+Content-Type: application/json
+
+### Retorna todos produtos
+GET http://localhost:3003/products
+Content-Type: application/json
+
