@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { UserDataBase } from "../data/UserDataBase";
 
-export class FindUserController {
+export class FindController {
 
     findUser = async (req: Request, resp: Response): Promise<void> => {
         try {
