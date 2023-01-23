@@ -7,4 +7,6 @@ Content-Type: application/json
     "password": "23432535"
 }
 
-
+###
+GET http://localhost:3003/user/user
+Content-Type: application/json
