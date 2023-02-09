@@ -6,6 +6,7 @@ import {
   EditUserInputDTO,
   EditUserInput,
   LoginInputDTO,
+  UserRole,
 } from "../model/user";
 import { IdGenerator } from "../services/IdGenerator";
 import { TokenGenerator } from "../services/TokenGenerator";
@@ -97,8 +98,11 @@ export class UserBusiness {
           'Preencha os campos "id", "name", "nickname" e "token"'
         );
       }
-
+// ex2
       const data = tokenGenerator.tokenData(token)
+      if (data.role.toUpperCase() !== UserRole.ADMIN){
+        throw new Unauthorized()
+      }
 
       if(!data.id) {
         throw new Unauthorized()

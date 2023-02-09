@@ -3,7 +3,8 @@ export type user = {
    email: string
    password: string
    name: string
-   nickname: string
+   nickname: string;
+   role : string
 };
 export enum UserRole{
    ADMIN = "ADMIN",
@@ -37,5 +38,6 @@ export interface EditUserInput {
 }
 
 export interface AuthenticationData {
-   id: string
+   id: string;
+   role:string
 }
