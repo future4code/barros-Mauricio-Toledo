@@ -1,6 +1,7 @@
 import { CustomError } from "../errors/CustomErros"
 import { User,UserResponse, userRoles } from "../models/User"
 import { UserRepository } from "../data/UserRepository"
+import { MissingRole,MissingUserId,Unauthorized, UserIdNotFound, } from "../errors/userErros"
 
 
 export class UserBusiness {
